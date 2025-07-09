@@ -1,12 +1,14 @@
+version: "3.8"
+
 services:
   agent-zero:
     container_name: agent-zero
     build:
-      context: .
-      dockerfile: Dockerfile  # o ajusta si está en subcarpeta como ./docker/run/Dockerfile
+      context: ./docker/run
+      dockerfile: Dockerfile
       args:
         BRANCH: main
-    volumes:
-      - ./agent-zero:/a0
     ports:
       - "50080:80"
+    volumes:
+      - ./agent-zero:/a0
