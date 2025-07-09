@@ -1,8 +1,7 @@
 services:
   agent-zero:
     container_name: agent-zero
-    build:
-    context: .
+    build: .
     volumes:
       - ./agent-zero:/a0
     ports:
