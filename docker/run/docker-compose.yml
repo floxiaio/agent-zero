@@ -1,7 +1,11 @@
 services:
   agent-zero:
     container_name: agent-zero
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile  # o ajusta si está en subcarpeta como ./docker/run/Dockerfile
+      args:
+        BRANCH: main
     volumes:
       - ./agent-zero:/a0
     ports:
