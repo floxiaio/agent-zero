@@ -4,7 +4,7 @@ services:
   agent-zero:
     container_name: agent-zero
     build:
-      context: ./docker/run
+      context: .  # ESTO es clave, usar "." porque ya estás en docker/run
       dockerfile: Dockerfile
       args:
         BRANCH: main
